@@ -25,12 +25,12 @@ def encode_image_to_base64(image_path):
 
 
 # Streamlit 
-st.set_page_config(page_title='Tablero Inteligente')
-st.title('Tablero Inteligente')
+st.set_page_config(page_title='Pintor inteligente')
+st.title('Hora de pintar')
 with st.sidebar:
     st.subheader("Acerca de:")
-    st.subheader("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto")
-st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla")
+    st.subheader("mira como la IA va a interpretar un boceto")
+st.subheader("Dibuja el boceto en el panel")
 
 # Add canvas component
 #bg_image = st.sidebar.file_uploader("Cargar Imagen:", type=["png", "jpg"])
@@ -38,9 +38,9 @@ st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla
 drawing_mode = "freedraw"
 stroke_width = st.sidebar.slider('Selecciona el ancho de línea', 1, 30, 5)
 #stroke_color = '#FFFFFF' # Set background color to white
-#bg_color = '#000000'
+#bg_color = '#FFFFF'
 stroke_color = st.color_picker("Color de Trazo", "#000000")
-bg_color = '#FFFFFF'
+bg_color = '#00000'
 #realtime_update = st.sidebar.checkbox("Update in realtime", True)
 drawing_mode = st.sidebar.selectbox(
     "Herramienta de dibujo:",
